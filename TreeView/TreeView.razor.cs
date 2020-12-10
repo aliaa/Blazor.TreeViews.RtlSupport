@@ -72,6 +72,9 @@ namespace Excubo.Blazor.TreeViews
         /// When set to true, all items are initially collapsed.
         /// </summary>
         [Parameter] public bool InitiallyCollapsed { get; set; }
+
+        [Parameter] public bool IsRtl { get; set; }
+
         internal void UpdateSelection(T item, bool? selected)
         {
             if (selected == null)

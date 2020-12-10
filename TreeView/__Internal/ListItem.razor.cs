@@ -26,6 +26,8 @@ namespace Excubo.Blazor.TreeViews.__Internal
         [CascadingParameter] private ListItem<T> Parent { get; set; }
         protected HashSet<ListItem<T>> Children = new HashSet<ListItem<T>>();
         private string Class => TreeView?.ItemClass;
+        private bool IsRtl => TreeView.IsRtl;
+
         protected override void OnInitialized()
         {
             if (TreeView.InitiallyCollapsed)
